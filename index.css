@@ -1,18 +1,36 @@
-/* Base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-serif: "Playfair Display", serif;
+  --color-brand-orange: #f97316;
+  --color-brand-green: #15803d;
+  --color-brand-dark: #111827;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f9fafb;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
 }
 
-#root {
-  min-height: 100vh;
+@layer utilities {
+  .bg-pattern {
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }
-
